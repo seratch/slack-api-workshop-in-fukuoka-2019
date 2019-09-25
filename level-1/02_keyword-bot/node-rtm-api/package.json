@@ -1,0 +1,16 @@
+{
+  "name": "node-rtm-api",
+  "version": "1.0.0",
+  "description": "https://slack.dev/node-slack-sdk/rtm-api",
+  "main": "index.js",
+  "scripts": {
+    "start": "node_modules/.bin/nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@slack/rtm-api": "^5.0.2",
+    "nodemon": "^1.19.2"
+  }
+}

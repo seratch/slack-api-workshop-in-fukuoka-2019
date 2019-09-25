@@ -1,0 +1,16 @@
+{
+  "name": "first-bolt-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node_modules/.bin/nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@slack/bolt": "^1.2.0",
+    "nodemon": "^1.19.2"
+  }
+}
