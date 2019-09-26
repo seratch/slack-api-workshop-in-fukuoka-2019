@@ -2,6 +2,8 @@
 
 ## Slack ワークスペースをつくる
 
+https://slack.com/create
+
 メールアドレスを入力します。
 
 <img height="300" src="https://user-images.githubusercontent.com/19658/65385068-94b01780-dd19-11e9-8d26-efb901494d69.png">
