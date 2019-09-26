@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@slack/rtm-api": "^5.0.2",
+    "@slack/rtm-api": "^5.0.3",
     "nodemon": "^1.19.2"
   }
 }

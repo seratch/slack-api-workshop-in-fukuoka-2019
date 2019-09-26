@@ -7,8 +7,8 @@ const app = new App({
 });
 
 app.use(args => {
-    console.log(JSON.stringify(args));
-    args.next();
+  console.log(JSON.stringify(args));
+  args.next();
 });
 
 const restaurants = [
@@ -53,13 +53,71 @@ app.command('/lunch', async ({ ack, respond }) => {
   });
 });
 
-app.action('find-another', async ({ action, ack, respond }) => {
+app.action('find-another', async ({ body, context, ack, respond }) => {
   ack();
+  const viewOpenArgs = {
+    "token": context.botToken,
+    "trigger_id": body.trigger_id,
+    "view": {
+      "type": "modal",
+      "callback_id": "modal-callback-id",
+      "title": {
+        "type": "plain_text",
+        "text": "Just a modal"
+      },
+      "submit": {
+        "type": "plain_text",
+        "text": "Submit"
+      },
+      "blocks": [
+        {
+          "type": "section",
+          "block_id": "section-identifier",
+          "text": {
+            "type": "mrkdwn",
+            "text": "*Welcome* to ~my~ Block Kit _modal_!"
+          },
+          "accessory": {
+            "type": "button",
+            "text": {
+              "type": "plain_text",
+              "text": "Just a button",
+            },
+            "action_id": "modal-button-clicked",
+          }
+        },
+        {
+          "type": "input",
+          "block_id": "ticket-desc",
+          "label": {
+            "type": "plain_text",
+            "text": "Ticket description"
+          },
+          "element": {
+            "type": "plain_text_input",
+            "multiline": true,
+            "action_id": "ticket-desc-value"
+          }
+        }
+      ],
+      "notify_on_close": true,
+    }
+  };
+  console.log(viewOpenArgs);
+  app.client.views.open(viewOpenArgs);
   respond({
     response_type: 'ephemeral', // 再びこのユーザにだけ見えるメッセージ
     replace_original: true, // もともとあったメッセージを置き換える
     blocks: getRecommendationBlocks()
   })
+});
+
+app.action('modal-button-clicked', async ({ ack }) => {
+  ack();
+});
+
+app.view('modal-callback-id', ({ ack, }) => {
+  ack();
 });
 
 app.event('file_created', async ({ event, context }) => {
