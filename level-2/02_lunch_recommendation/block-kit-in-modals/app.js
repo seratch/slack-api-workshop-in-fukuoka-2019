@@ -95,6 +95,10 @@ app.action('add-review', async ({ body, context, ack }) => {
         "type": "plain_text",
         "text": "送信する"
       },
+      "close": {
+        "type": "plain_text",
+        "text": "閉じる"
+      },
       "blocks": [
         {
           "type": "input",
