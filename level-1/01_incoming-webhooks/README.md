@@ -51,6 +51,15 @@ curl -X POST \
   https://hooks.slack.com/services/T12345678/B12345678/XXXXXXXXXXXXXXXX
 ```
 
+Windows の場合は `'` を使わずに、`"` を使い、 `"` の中はエスケープしてください。
+
+```
+curl -X POST \
+  -H "Content-type: application/json" \
+  --data "{¥"text¥":¥"Hello, World!¥"}" \
+  https://hooks.slack.com/services/T12345678/B12345678/XXXXXXXXXXXXXXXX
+```
+
 curl コマンドで複雑な JSON を送るのはやりにくいので Block Kit のメッセージを送るなら Postman などのツールを使うとよいでしょう。
 
 <img height=500 src="https://user-images.githubusercontent.com/19658/65408714-84f60900-ddd5-11e9-92b1-97a0941b0bde.png">
