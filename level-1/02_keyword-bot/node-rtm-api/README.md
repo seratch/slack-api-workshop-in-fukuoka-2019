@@ -13,6 +13,16 @@ npm init -y
 npm i @slack/rtm-api nodemon
 ```
 
+次に実際の処理を書いた `index.js` という名前のファイルを https://github.com/seratch/slack-api-workshop-in-fukuoka-2019/blob/master/level-1/02_keyword-bot/node-rtm-api/index.js の内容で作成して保存します。
+
+最後にこの index.js を簡単に実行するために `package.json` の中の `scripts` の部分を以下のように書き換えてください。
+
+```json
+  "scripts": {
+    "start": "node_modules/.bin/nodemon index.js"
+  },
+```
+
 ## 実行する
 
 ```bash
