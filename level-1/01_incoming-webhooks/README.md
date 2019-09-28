@@ -42,7 +42,7 @@ Off になっているところを On にトグルします。
 
 <img height="300" src="https://user-images.githubusercontent.com/19658/65387247-f8940980-dd34-11e9-8c26-44c11cdd9607.png">
 
-以下のコマンドは動作しません。このようなスクリプトが表示されているかと思います。`hooks.slack.com` の URL を実際のものにすれば `Hello, World!` というメッセージを投稿することができます。
+このようなスクリプトが表示されているかと思います。`hooks.slack.com` の URL を実際のものにすれば `Hello, World!` というメッセージを投稿することができます。
 
 ```bash
 curl -X POST \
