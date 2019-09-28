@@ -44,6 +44,7 @@ node app.js
 
 とりあえず起動するかを確認してみてください。
 
+なお、Windows で作業される方は `export SLACK_BOT_TOKEN=` のような箇所は、コマンドプロンプトでの `set SLACK_BOT_TOKEN=` と読み替えてください。
 
 ## 機能の雛形をつくる
 
