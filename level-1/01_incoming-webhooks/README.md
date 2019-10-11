@@ -54,9 +54,9 @@ curl -X POST \
 Windows の場合は、コマンドプロンプト（cmd.exe）で `'` を使わずに、`"` を使い、 `"` の中はエスケープしてください。
 
 ```
-curl -X POST \
-  -H "Content-type: application/json" \
-  --data "{¥"text¥":¥"Hello, World!¥"}" \
+curl -X POST ^
+  -H "Content-type: application/json" ^
+  --data "{¥"text¥":¥"Hello, World!¥"}" ^
   https://hooks.slack.com/services/T12345678/B12345678/XXXXXXXXXXXXXXXX
 ```
 
